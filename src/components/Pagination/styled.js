@@ -21,7 +21,7 @@ export const Container = styled.div`
 
       ${({ theme: { media, breakpoints } }) => css`
         ${media.up(breakpoints.tablet)} {
-          display: block;
+          display: flex;
         }
       `}
     }
