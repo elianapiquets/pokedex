@@ -1,11 +1,8 @@
-import styled, { css } from 'styled-components'
-import Link from 'next/link'
-import { desaturate } from 'polished'
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
-  padding: 16px;
-  background-color: #252525;
-  color: #fff;
+  padding: 30px 16px;
+  color: #262626;
   ${({ theme: { media, breakpoints } }) => css`
     ${media.up(breakpoints.tablet)} {
       padding: 50px;
@@ -14,8 +11,15 @@ export const Container = styled.div`
 
   h1 {
     margin: 0 0 30px 0;
+    font-size: 30px;
+    font-family: "Major Mono Display", monospace;
+    ${({ theme: { media, breakpoints } }) => css`
+      ${media.up(breakpoints.tablet)} {
+        font-size: 45px;
+      }
+    `}
   }
-`
+`;
 
 export const Grid = styled.div`
   display: grid;
@@ -36,35 +40,4 @@ export const Grid = styled.div`
       grid-template-columns: repeat(4, 1fr);
     }
   `}
-`
-
-export const Card = styled(Link)`
-  border-radius: 10px;
-  box-shadow: 6px 7px 12px -5px rgba(0, 0, 0, 0.7);
-  background-color: ${(p) => desaturate(0.2, p.$color)};
-  ${(p) =>
-    p.$color === 'white' &&
-    css`
-      background-color: #dfdcdc;
-    `}
-  padding: 6px 10px;
-  transition: all ease 0.4s;
-  position: relative;
-  color: #ffffff;
-  text-transform: capitalize;
-
-  &:hover {
-    background-color: ${(p) => desaturate(0.4, p.$color)};
-
-    ${(p) =>
-      p.$color === 'white' &&
-      css`
-        background-color: #c4bfbf;
-      `}
-  }
-
-  h2 {
-    font-size: 16px;
-    font-weight: 400;
-  }
-`
+`;

@@ -1,7 +1,7 @@
 export const color = {
   link: {
-    default: '#fff',
-    hover: '#484747',
-    active: '#706d6d',
+    default: "#333",
+    hover: "#484747",
+    active: "#706d6d",
   },
-}
+};
