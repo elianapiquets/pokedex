@@ -1,4 +1,4 @@
-export const colors = {
+export const colors: any = {
   black: "#2E2E2E",
   blue: "#385AAF",
   brown: "#B59544",
@@ -11,6 +11,6 @@ export const colors = {
   yellow: "#FCD139",
 };
 
-export const mapColor = (color) => {
+export const mapColor = (color:  string) => {
   return Object.keys(colors).includes(color) ? colors[color] : color;
 };

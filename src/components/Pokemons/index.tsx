@@ -1,22 +1,31 @@
 import { Container, Grid } from "./styled";
-import { withRouter } from "next/router";
 import Pagination from "../Pagination";
 import Card from "./Card";
+import { withRouter, NextRouter } from 'next/router'
+import  { PokemonsSpecies, Pokemon } from '../Pokemon'
+
+type Props = {
+  pokemons: Pokemon[]
+  pageCount: number
+  currentPage: number
+  pokemonsSpecies: PokemonsSpecies[]
+  router: NextRouter
+}
 
 export function Pokemons({
   pokemons,
   pageCount,
   currentPage,
   pokemonsSpecies,
-  ...props
-}) {
+  router,
+}: Props) {
   if (!pokemons && !pokemonsSpecies) return null;
-  const onChangeHandler = (page) => {
-    const path = props.router.pathname;
-    const query = { ...props.router.query };
+  const onChangeHandler = (page: any) => {
+    const path = router.pathname;
+    const query = { ...router.query };
     query.page = page.selected + 1;
 
-    props.router.push({
+    router.push({
       pathname: path,
       query: query,
     });

@@ -15,7 +15,7 @@ jest.mock("next/router", () => ({
 
 describe("Pokemons", () => {
   it("does not break if no props", () => {
-    const { container } = render(<Pokemons />);
+    const { container } = render(<Pokemons pokemons={pokemomsMock} />);
     expect(container).not.toBe(null);
   });
 

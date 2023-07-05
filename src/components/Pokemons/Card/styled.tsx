@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import Link from "next/link";
 import { darken } from "polished";
 
-export const Container = styled(Link)`
+export const Container = styled(Link)<{$color: string}>`
   border-radius: 10px;
   box-shadow: 5px 5px 7px -3px rgba(0, 0, 0, 0.25);
   background-color: ${(p) => p.$color};

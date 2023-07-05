@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const Container = styled.div``;
 
-export const Character = styled.div`
+export const Character = styled.div<{ $color: string}>`
   padding: 30px 16px;
   background-color: ${(p) => p.$color};
 
@@ -13,7 +13,7 @@ export const Character = styled.div`
   `}
 `;
 
-export const Name = styled.h1`
+export const Name = styled.h1<{ $color: string}>`
   margin: 0 0 30px 0;
   color: #ffffff;
   text-transform: capitalize;

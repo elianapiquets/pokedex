@@ -1,7 +1,13 @@
 import ReactPaginate from "react-paginate";
 import { Container } from "./styled";
 
-export function Pagination({ pageCount, currentPage, onChangeHandler }) {
+type Props = {
+  pageCount: number
+  currentPage: number
+  onChangeHandler: () =>{}
+}
+
+export function Pagination({ pageCount, currentPage, onChangeHandler }: Props) {
   if (!pageCount && !currentPage) return null;
   return (
     <Container>

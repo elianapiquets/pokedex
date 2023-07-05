@@ -8,8 +8,8 @@ export const breakpoints = {
 }
 
 export const media = {
-  up: (breakpoint) => `@media (min-width: ${breakpoint}px)`,
-  down: (breakpoint) => `@media (max-width: ${breakpoint - 1}px)`,
-  between: (breakpointMin, breakpointMax) =>
+  up: (breakpoint: number) => `@media (min-width: ${breakpoint}px)`,
+  down: (breakpoint: number) => `@media (max-width: ${breakpoint - 1}px)`,
+  between: (breakpointMin: number, breakpointMax: number) =>
     `@media (max-width: ${breakpointMax}px) and (min-width: ${breakpointMin}px)`,
 }

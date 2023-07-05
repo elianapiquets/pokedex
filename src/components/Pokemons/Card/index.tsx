@@ -1,8 +1,15 @@
 import { Container } from "./styled";
 import Image from "next/image";
-import { mapColor } from "../../../helpers/mapColors/";
+import { mapColor } from "../../../helpers/mapColors";
+import  { Pokemon } from '../../Pokemon'
 
-export function Card({ pokemon, $color, imagePriority, ...props }) {
+type Props = {
+  pokemon?: Pokemon 
+  $color?: string
+  imagePriority?: boolean
+}
+
+export function Card({ pokemon, $color, imagePriority, ...props }: Props) {
   if (!pokemon) return null;
   const index = ("00" + pokemon.id).slice(-3);
   const image = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${index}.png`;
