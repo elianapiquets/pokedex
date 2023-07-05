@@ -26,4 +26,10 @@ export const Container = styled(Link)`
     font-size: 16px;
     font-weight: 400;
   }
+
+  &:focus {
+    outline-offset: 3px;
+    outline-width: 5px;
+    outline-style: inset;
+  }
 `;

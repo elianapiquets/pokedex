@@ -15,6 +15,7 @@ export function Card({ pokemon, $color, imagePriority, ...props }) {
       href={`/pokemon/${pokemon.name}`}
       $color={mapepdColor}
       data-testid="pokemon"
+      role="button"
     >
       <Image
         src={image}

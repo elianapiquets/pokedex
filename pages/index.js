@@ -21,7 +21,9 @@ export async function getServerSideProps({ query }) {
             count
           }
         }
-        pokemon_v2_pokemonspecies {
+        pokemon_v2_pokemonspecies(limit: ${itemsPerPage}, offset: ${
+      itemsPerPage * (page - 1)
+    }, order_by: {id: asc}) {
           id
           pokemon_v2_pokemoncolor {
             name
